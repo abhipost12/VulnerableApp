@@ -5,23 +5,25 @@ updates:
     schedule:
       interval: "monthly" 
     commit-message:
-      prefix: "maven-version-updates"
+      prefix: "gradle-version-updates"
     groups:
       minor-and-patch:
-        applies-to: version-updates
         patterns:
           - "*" 
         update-types:
         - "minor"
         - "patch"
-    - package-ecosystem: "docker"
+   - package-ecosystem: "docker"
     directory: "/" 
     schedule:
-      interval: "daily" 
+      interval: "monthly" 
     commit-message:
-      prefix: "docker"
+      prefix: "docker-version-updates"
     groups:
       minor-and-patch:
-        applies-to: version-updates
         patterns:
-          - "*"  
+          - "*" 
+        update-types:
+        - "minor"
+        - "patch"
+
